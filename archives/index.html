@@ -267,7 +267,7 @@
       
         
       
-      嗯..! 目前共计 2 篇日志。 继续努力。
+      嗯..! 目前共计 3 篇日志。 继续努力。
     </span>
 
     
@@ -281,6 +281,43 @@
         <div class="collection-title">
           <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
         </div>
+      
+      
+
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h1 class="post-title">
+        
+            <a class="post-title-link" href="/2017/04/12/初步成型/" itemprop="url">
+              
+                <span itemprop="name">初步成型</span>
+              
+            </a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2017-04-12T18:12:56+08:00"
+              content="2017-04-12" >
+          04-12
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+    
+
+      
+      
+      
+
       
       
 
@@ -355,6 +392,32 @@
 
   
 
+<!-- 如果不是首页且没使用 `comments: false` 关闭评论，则尝试加载评论 -->
+<% if (!is_home() && post.comments){ %>
+    <!-- 配置中启用多说时，导入相应代码 -->
+    <% if (theme.duoshuo.on) { %> 
+      <!-- 导入duoshuo.ejs时，同时指定其中几个变量的内容。 -->
+      <%- partial('comments/duoshuo', {
+          key: post.path,
+          title: post.title,
+          url: config.url+url_for(post.path),
+          }) %>
+    <!-- 配置中仅启用友言时，导入相应代码 -->
+    <% } else if (theme.youyan.on) { %>
+        <%- partial('comments/youyan') %>
+    <!-- 配置中仅启用 Disqus 时，导入相应代码 -->
+    <% } else if (theme.disqus.on) { %>
+        <%- partial('comments/disqus', {
+            shortname: theme.disqus.shortname
+          }) %>
+    <!-- 以上皆关闭且 Hexo 配置中设置了 disqus_shortname 时，导入相应代码 -->
+    <% } else if (config.disqus_shortname) { %>
+        <!-- 文件分离和变量的使用，使代码能较好的兼容 Hexo 主配置 -->
+        <%- partial('comments/disqus', {
+            shortname: config.disqus_shortname
+          }) %>
+    <% } %>
+<% } %>
 
 
           </div>
@@ -397,7 +460,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -459,7 +522,7 @@
         
         
 
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=694811220&auto=0&height=430"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=320 height=440 src="//music.163.com/outchain/player?type=0&id=694811220&auto=0&height=430"></iframe>
 
         
 
